@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         comenzar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent comenzar = new Intent(MainActivity.this, flashcard.class);
+                Intent comenzar = new Intent(MainActivity.this, nivel.class);
                 startActivity(comenzar);
             }
         });

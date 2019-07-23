@@ -30,13 +30,39 @@ public class flashcard extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                outpot1=r.nextInt((99-1)+1)+1;
-                outpot2=r.nextInt((99-1)+1)+1;
-                do {
-                    if (outpot2 > outpot1) {
-                        outpot2 = r.nextInt((99 - 1) + 1) + 1;
-                    }
-                }while(outpot2>outpot1);
+                if(nivel.n==1)
+                {
+                    outpot1=r.nextInt((99-1)+1)+1;
+                    outpot2=r.nextInt((99-1)+1)+1;
+                    do {
+                        if (outpot2 > outpot1) {
+                            outpot2 = r.nextInt((99 - 1) + 1) + 1;
+                        }
+                    }while(outpot2>outpot1);
+                }
+
+                else if(nivel.n==2)
+                {
+                    outpot1=r.nextInt((999-100)+100)+100;
+                    outpot2=r.nextInt((999-100)+100)+100;
+                    do {
+                        if (outpot2 > outpot1) {
+                            outpot2 = r.nextInt((999 - 100) + 100) + 100;
+                        }
+                    }while(outpot2>outpot1);
+                }
+
+                else if(nivel.n==3)
+                {
+                    outpot1=r.nextInt((9999-1000)+1000)+1000;
+                    outpot2=r.nextInt((9999-1000)+1000)+1000;
+                    do {
+                        if (outpot2 > outpot1) {
+                            outpot2 = r.nextInt((9999 - 1000) + 1000) + 1000;
+                        }
+                    }while(outpot2>outpot1);
+                }
+
                 txt1.setText(""+ outpot1);
                 txt2.setText(""+ outpot2);
 
