@@ -10,7 +10,7 @@ import android.widget.TextView;
 import java.util.Random;
 
 public class flashcard extends AppCompatActivity {
-    Button generar, respuesta;
+    Button  respuesta;
     TextView txt1, txt2,txt4;
     Random r;
     int outpot1, outpot2, res,i=MainActivity.cont;
@@ -18,7 +18,6 @@ public class flashcard extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_flashcard);
-        generar=(Button)findViewById(R.id.btn1);
         respuesta=(Button)findViewById(R.id.btn2);
         txt1=(TextView)findViewById(R.id.txt1);
         txt2=(TextView)findViewById(R.id.txt2);
@@ -26,11 +25,7 @@ public class flashcard extends AppCompatActivity {
         r= new Random();
         txt4.setText("Ronda "+ i);
 
-        generar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                if(nivel.n==1)
+            if(nivel.n==1)
                 {
                     outpot1=r.nextInt((99-1)+1)+1;
                     outpot2=r.nextInt((99-1)+1)+1;
@@ -65,9 +60,6 @@ public class flashcard extends AppCompatActivity {
 
                 txt1.setText(""+ outpot1);
                 txt2.setText(""+ outpot2);
-
-            }
-        });
 
         respuesta.setOnClickListener(new View.OnClickListener() {
             @Override
